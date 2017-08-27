@@ -10,13 +10,11 @@ public class ParkingLots {
 		this.totalCars = totalCars;
 		this.assignedCarLots = assignedCarLots;
 		this.totalLots = totalLots;
-		// TODO Auto-generated constructor stub
 	}
 	public ParkingLots() {
 		this.totalCars = 0;
 		this.assignedCarLots = new Car[0];
 		this.totalLots = 0;
-		// TODO Auto-generated constructor stub
 	}
 	public Integer getTotalLots() {
 		return totalLots;
@@ -86,6 +84,7 @@ public class ParkingLots {
 				.append(" park <car_Reg_num> <car_colour>");
 			}
 		} else if ("leave".equalsIgnoreCase(command)) {
+			// COMMAND :: "leave 4"
 			if (commands.length == 2) {
 				String slotNumber = commands[1];
 				if (null != assignedCarLots[Integer.parseInt(slotNumber)-1]) {
@@ -100,6 +99,7 @@ public class ParkingLots {
 				.append(" leave <slot_number>");
 			}
 		} else if ("status".equalsIgnoreCase(command)) {
+			// COMMAND :: "status"
 			if (totalCars == 0) {
 				out.append("Parking lot is empty");
 			} else {
@@ -115,6 +115,7 @@ public class ParkingLots {
 			}
 		} else if ("registration_numbers_for_cars_with_colour"
 				.equalsIgnoreCase(command)) {
+			// COMMAND :: "registration_numbers_for_cars_with_colour white"
 			if (commands.length == 2) {
 				String colour = commands[1];
 				int carWithColourCount = 0;
@@ -136,6 +137,7 @@ public class ParkingLots {
 			
 		} else if ("slot_number_for_registration_number"
 				.equalsIgnoreCase(command)) {
+			// COMMAND :: "slot_number_for_registration_number HR51"
 			if (commands.length == 2) {
 				String regNo = commands[1];
 				boolean found = false;
@@ -159,7 +161,7 @@ public class ParkingLots {
 			
 		} else if ("slot_numbers_for_cars_with_colour"
 				.equalsIgnoreCase(command)) {
-			
+			// COMMAND :: "slot_numbers_for_cars_with_colour white"
 			if (commands.length == 2) {
 				String colour = commands[1];
 				int carWithColourCount = 0;
