@@ -2,10 +2,11 @@ package parking.inputreaders;
 
 import java.util.Scanner;
 
-public class TerminalInputReader extends InputReaderImpl {
+public class TerminalInputReader extends InputReader {
 
+	@SuppressWarnings("resource")
 	@Override
-	public String showInterface() {
+	public void showInterface(String[] args) {
 		Scanner scanner = new Scanner(System.in);
 		while(true) {
 			System.out.println("Input:");

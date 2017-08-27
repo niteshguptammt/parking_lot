@@ -2,11 +2,11 @@ package parking.inputreaders;
 
 import parking.ParkingLots;
 
-public abstract class InputReaderImpl {
+public abstract class InputReader {
 
 	private ParkingLots parking = new ParkingLots();
 	
-	public abstract String showInterface();
+	public abstract void showInterface(String[] args);
 	
 	public ParkingLots getParking() {
 		return parking;
