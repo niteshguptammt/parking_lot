@@ -1,0 +1,4 @@
+echo "hello"
+echo $0
+echo $1
+java  -jar target/parking-lot.jar $1
